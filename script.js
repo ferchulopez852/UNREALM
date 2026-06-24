@@ -2,7 +2,9 @@ console.log("Portfolio iniciado");
 
 const buscador = document.getElementById("searchInput");
 
-if(buscador){
+/* BUSCADOR */
+
+if (buscador) {
 
     buscador.addEventListener("keyup", () => {
 
@@ -14,17 +16,53 @@ if(buscador){
 
             let texto = card.innerText.toLowerCase();
 
-            if(texto.includes(filtro)){
+            if (texto.includes(filtro)) {
 
                 card.style.display = "block";
 
-            }else{
+            } else {
 
                 card.style.display = "none";
 
             }
 
         });
+
+    });
+
+}
+
+/* MOSTRAR SOLO UN PROYECTO */
+
+function mostrarProyecto(id){
+
+    let tarjetas = document.querySelectorAll(".game-card");
+
+    tarjetas.forEach(card => {
+
+        if(card.id === id){
+
+            card.style.display = "block";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+/* MOSTRAR TODOS */
+
+function mostrarTodo(){
+
+    let tarjetas = document.querySelectorAll(".game-card");
+
+    tarjetas.forEach(card => {
+
+        card.style.display = "block";
 
     });
 
