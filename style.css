@@ -319,4 +319,33 @@ body{
 
         justify-content:flex-start;
     }
+    /* BOTONES DE VIDEO */
+
+.video-btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 25px;
+
+    background:#00bfff;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.video-btn:hover{
+
+    background:#0099cc;
+
+    transform:scale(1.05);
+}
 }
