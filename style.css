@@ -28,8 +28,11 @@ body{
     url("./imagenes/fondo2.webp");
 
     background-size:cover;
+
     background-position:center;
+
     background-repeat:no-repeat;
+
     background-attachment:fixed;
 }
 
@@ -52,6 +55,7 @@ body{
     position:fixed;
 
     top:0;
+
     left:0;
 
     z-index:1000;
@@ -149,26 +153,34 @@ body{
     color:#bdbdbd;
 }
 
-/* SECCIONES */
+/* GRID DE JUEGOS */
 
-.project-section{
+.games-grid{
 
     display:flex;
 
     justify-content:center;
 
-    padding:80px 20px;
+    align-items:flex-start;
 
-    scroll-margin-top:120px;
+    gap:30px;
+
+    padding:60px 40px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+    position:relative;
+
+    z-index:10;
 }
 
 /* TARJETAS */
 
 .game-card{
 
-    width:900px;
-
-    max-width:95%;
+    width:320px;
 
     background:rgba(0,0,0,0.75);
 
@@ -176,29 +188,42 @@ body{
 
     border-radius:15px;
 
+    overflow:hidden;
+
     padding:30px;
 
     text-align:center;
 
     box-shadow:0 0 15px rgba(0,0,0,0.4);
+
+    transition:0.3s;
 }
+
+.game-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 20px rgba(0,191,255,0.35);
+}
+
+/* TITULOS */
 
 .game-card h2{
 
     margin-bottom:15px;
 
-    font-size:42px;
+    font-size:28px;
 }
+
+/* DESCRIPCION */
 
 .game-card p{
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
-    line-height:1.8;
+    line-height:1.5;
 
     color:#d0d0d0;
-
-    font-size:20px;
 }
 
 /* GALERIA */
@@ -207,11 +232,11 @@ body{
 
     display:flex;
 
-    gap:15px;
+    gap:10px;
 
     overflow-x:auto;
 
-    margin-bottom:25px;
+    margin-bottom:20px;
 
     padding-bottom:10px;
 }
@@ -223,9 +248,9 @@ body{
 
 .gallery img{
 
-    width:320px;
+    width:180px;
 
-    height:180px;
+    height:110px;
 
     object-fit:cover;
 
@@ -234,24 +259,26 @@ body{
     transition:0.3s;
 
     cursor:pointer;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
 }
 
 .gallery img:hover{
 
     transform:scale(1.05);
 
-    box-shadow:0 0 15px rgba(0,191,255,0.6);
+    box-shadow:0 0 15px rgba(0,191,255,0.5);
 }
 
-/* BOTONES */
+/* BOTONES DE VIDEO */
 
 .video-btn{
 
     display:inline-block;
 
-    margin-top:10px;
+    margin-top:20px;
 
-    padding:14px 28px;
+    padding:12px 25px;
 
     background:#00bfff;
 
@@ -273,7 +300,7 @@ body{
     transform:scale(1.05);
 }
 
-/* SCROLL */
+/* SCROLL PERSONALIZADO */
 
 .gallery::-webkit-scrollbar{
 
@@ -312,19 +339,27 @@ body{
         gap:20px;
     }
 
+    .games-grid{
+
+        padding:40px 20px;
+    }
+
+    .game-card{
+
+        width:100%;
+
+        max-width:500px;
+    }
+
+    .gallery{
+
+        justify-content:flex-start;
+    }
+
     .gallery img{
 
-        width:220px;
-        height:130px;
-    }
+        width:140px;
 
-    .game-card h2{
-
-        font-size:32px;
-    }
-
-    .game-card p{
-
-        font-size:18px;
+        height:90px;
     }
 }
