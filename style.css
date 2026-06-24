@@ -28,11 +28,8 @@ body{
     url("./imagenes/fondo2.webp");
 
     background-size:cover;
-
     background-position:center;
-
     background-repeat:no-repeat;
-
     background-attachment:fixed;
 }
 
@@ -157,19 +154,19 @@ body{
 
 .games-grid{
 
-    display:flex;
+    display:grid;
 
-    justify-content:center;
-
-    align-items:flex-start;
+    grid-template-columns:repeat(3, 1fr);
 
     gap:30px;
 
-    padding:60px 40px;
+    max-width:1400px;
 
-    flex-wrap:wrap;
+    margin:40px auto;
 
-    margin-top:40px;
+    padding:0 40px;
+
+    align-items:start;
 
     position:relative;
 
@@ -180,7 +177,7 @@ body{
 
 .game-card{
 
-    width:320px;
+    width:100%;
 
     background:rgba(0,0,0,0.75);
 
@@ -270,7 +267,7 @@ body{
     box-shadow:0 0 15px rgba(0,191,255,0.5);
 }
 
-/* BOTONES DE VIDEO */
+/* BOTONES */
 
 .video-btn{
 
@@ -300,7 +297,7 @@ body{
     transform:scale(1.05);
 }
 
-/* SCROLL PERSONALIZADO */
+/* SCROLL */
 
 .gallery::-webkit-scrollbar{
 
@@ -319,7 +316,25 @@ body{
     border-radius:20px;
 }
 
+/* CORRECCIÓN DE ANCLAS */
+
+#explorar,
+#scratch,
+#rpgmaker,
+#unity{
+
+    scroll-margin-top:120px;
+}
+
 /* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .games-grid{
+
+        grid-template-columns:1fr;
+    }
+}
 
 @media(max-width:900px){
 
@@ -339,16 +354,9 @@ body{
         gap:20px;
     }
 
-    .games-grid{
-
-        padding:40px 20px;
-    }
-
     .game-card{
 
         width:100%;
-
-        max-width:500px;
     }
 
     .gallery{
@@ -362,7 +370,7 @@ body{
 
         height:90px;
     }
-    /* CORRECCIÓN DE ANCLAS */
+}
 
 #explorar,
 #scratch,
