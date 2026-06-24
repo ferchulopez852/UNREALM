@@ -362,4 +362,12 @@ body{
 
         height:90px;
     }
+    /* CORRECCIÓN DE ANCLAS */
+
+#explorar,
+#scratch,
+#rpgmaker,
+#unity{
+    scroll-margin-top:120px;
+}
 }
