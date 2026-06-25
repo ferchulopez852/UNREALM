@@ -153,24 +153,13 @@ body{
 /* GRID DE JUEGOS */
 
 .games-grid{
-
     display:grid;
-
     grid-template-columns:repeat(3, 1fr);
-
     gap:30px;
-
     max-width:1400px;
-
     margin:40px auto;
-
     padding:0 40px;
-
     align-items:start;
-
-    position:relative;
-
-    z-index:10;
 }
 
 /* TARJETAS */
