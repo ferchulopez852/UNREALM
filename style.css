@@ -122,23 +122,17 @@ body{
 /* TARJETAS */
 .game-card{
     background:rgba(0,0,0,0.75);
-
     backdrop-filter:blur(6px);
-
     border-radius:15px;
-
     padding:25px;
-
     text-align:center;
-
     box-shadow:0 0 15px rgba(0,0,0,.4);
-
     transition:.3s;
-
     display:flex;
     flex-direction:column;
-
     overflow:hidden;
+
+    min-width:0;
 }
 
 .game-card:hover{
@@ -164,23 +158,29 @@ body{
 /* GALERIA */
 .gallery{
     display:flex;
-    gap:10px;
+    gap:8px;
+
+    width:100%;
+    max-width:100%;
 
     overflow-x:auto;
+    overflow-y:hidden;
 
     margin-bottom:20px;
-
     padding-bottom:10px;
+
+    scroll-behavior:smooth;
 }
 
+/* evita que las imágenes deformen la tarjeta */
 .gallery a{
-    flex-shrink:0;
+    flex:0 0 auto;
 }
 
 /* IMAGENES */
 .gallery img{
-    width:180px;
-    height:110px;
+    width:120px;
+    height:70px;
 
     object-fit:cover;
 
@@ -188,13 +188,28 @@ body{
 
     transition:.3s;
 
-    box-shadow:0 0 10px rgba(0,0,0,.4);
+    box-shadow:0 0 8px rgba(0,0,0,.4);
 }
 
 .gallery img:hover{
     transform:scale(1.05);
 
-    box-shadow:0 0 15px rgba(0,191,255,.5);
+    box-shadow:0 0 12px rgba(0,191,255,.5);
+}
+
+/* SCROLL */
+.gallery::-webkit-scrollbar{
+    height:6px;
+}
+
+.gallery::-webkit-scrollbar-track{
+    background:rgba(255,255,255,.08);
+    border-radius:20px;
+}
+
+.gallery::-webkit-scrollbar-thumb{
+    background:#00bfff;
+    border-radius:20px;
 }
 
 /* BOTONES */
