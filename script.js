@@ -203,3 +203,4 @@ document.addEventListener("keydown", function (e) {
 window.abrirProyecto = abrirProyecto;
 
 window.cerrarProyecto = cerrarProyecto;
+alert("script cargado correctamente");
