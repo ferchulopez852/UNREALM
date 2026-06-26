@@ -144,7 +144,7 @@
                 <a href="https://drive.google.com/file/d/1WSgbOJtfG5baRMjURtT5ZzsYRpevFf1N/view?usp=drive_link" target="_blank" class="video-btn">
                     ▶ Ver Video Unity - Demo 2
                 </a>
-                <a href="https://docs.google.com/document/d/1EK1feIUlPnly_srHCztB4mFoAMjiBDyVb0s3sV9CxVA/edit?usp=drive_link" target="_blank" class="video-btn project-btn">
+                <a href="https://docs.google.com/document/d/1EK1feIUlPnly_srHCztB4mFoAMjiBDyVb0s3sV9CxVA/edit?usp=sharing" target="_blank" class="video-btn project-btn">
                     📁 Ver Proyecto
                 </a>
                 <a href="https://drive.google.com/file/d/1ySDMzqCOXLXdUEUtlTup04ytdI5GgOYr/view?usp=drive_link" target="_blank" class="video-btn download-btn">
@@ -155,6 +155,23 @@
 
     </section>
 
-    <script src="script.js"></script>
+    <script>
+        console.log("Buscador interno activo - Sin alertas.");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const buscador = document.getElementById("searchInput");
+            if (buscador) {
+                buscador.addEventListener("keyup", () => {
+                    const filtro = buscador.value.toLowerCase();
+                    const tarjetas = document.querySelectorAll(".game-card");
+
+                    tarjetas.forEach(card => {
+                        const texto = card.innerText.toLowerCase();
+                        card.style.display = texto.includes(filtro) ? "flex" : "none";
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
