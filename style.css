@@ -1,295 +1,270 @@
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ==========================================================================
+   1. RESET & CONFIGURACIÓN GLOBAL
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* SCROLL SUAVE */
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-/* BODY */
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:white;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,0.70),
-        rgba(0,0,0,0.80)
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.70),
+        rgba(0, 0, 0, 0.80)
     ),
     url("./imagenes/fondo2.webp");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* NAVBAR */
-.navbar{
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    background-color:rgba(0,0,0,0.85);
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:1000;
-    backdrop-filter:blur(8px);
+/* ==========================================================================
+   2. NAVBAR & NAVEGACIÓN
+   ========================================================================== */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
 }
 
-/* LOGO */
-.logo{
-    font-size:24px;
-    font-weight:bold;
-    letter-spacing:2px;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-/* LINKS */
-.nav-links{
-    display:flex;
-    gap:30px;
-    list-style:none;
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
 }
 
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    font-size:16px;
-    transition:.3s;
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: .3s;
 }
 
-.nav-links a:hover{
-    color:#00bfff;
-    text-shadow:0 0 10px #00bfff;
+.nav-links a:hover {
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff;
 }
 
-/* HERO */
-.hero{
-    width:100%;
-    height:25vh;
+/* ==========================================================================
+   3. SECCIÓN HERO & BUSCADOR
+   ========================================================================== */
+.hero {
+    width: 100%;
+    height: 25vh;
 }
 
-/* BUSCADOR */
-.search-box{
-    display:flex;
-    justify-content:center;
-    margin:20px auto 30px;
-    padding:0 20px;
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 30px;
+    padding: 0 20px;
 }
 
-.search-box input{
-    width:550px;
-    max-width:100%;
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    font-size:18px;
-    background:rgba(0,0,0,0.75);
-    color:white;
-    outline:none;
+.search-box input {
+    width: 550px;
+    max-width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    outline: none;
 }
 
-.search-box input::placeholder{
-    color:#bdbdbd;
+.search-box input::placeholder {
+    color: #bdbdbd;
 }
 
-/* GRID */
-.games-grid{
-    display:grid;
-
-    grid-template-columns:repeat(3,minmax(320px,1fr));
-
-    gap:25px;
-
-    max-width:1400px;
-
-    margin:40px auto;
-
-    padding:0 30px;
-
-    align-items:start;
-
-    position:relative;
-    z-index:10;
+/* ==========================================================================
+   4. SECCIÓN DE TARJETAS (GAMES GRID)
+   ========================================================================== */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 30px;
+    align-items: start;
+    position: relative;
+    z-index: 10;
 }
 
-/* TARJETAS */
-.game-card{
-    background:rgba(0,0,0,0.75);
-    backdrop-filter:blur(6px);
-    border-radius:15px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 0 15px rgba(0,0,0,.4);
-    transition:.3s;
-    display:flex;
-    flex-direction:column;
-    overflow:hidden;
-
-    min-width:0;
+.game-card {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .4);
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 0;
 }
 
-.game-card:hover{
-    transform:translateY(-5px);
-
-    box-shadow:0 0 20px rgba(0,191,255,.35);
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 191, 255, .35);
 }
 
-/* TITULOS */
-.game-card h2{
-    margin-bottom:15px;
-    font-size:28px;
+.game-card h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
 }
 
-/* TEXTO */
-.game-card p{
-    margin-bottom:20px;
-    font-size:16px;
-    line-height:1.6;
-    color:#d0d0d0;
+.game-card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #d0d0d0;
 }
 
-/* GALERIA */
-.gallery{
-    display:flex;
-    gap:8px;
-
-    width:100%;
-    max-width:100%;
-
-    overflow-x:auto;
-    overflow-y:hidden;
-
-    margin-bottom:20px;
-    padding-bottom:10px;
-
-    scroll-behavior:smooth;
+/* Container de botones dentro de la tarjeta */
+.card-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: auto; /* Empuja los botones hacia el fondo */
 }
 
-/* evita que las imágenes deformen la tarjeta */
-.gallery a{
-    flex:0 0 auto;
+/* ==========================================================================
+   5. GALERÍAS DE IMÁGENES
+   ========================================================================== */
+.gallery {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
 }
 
-/* IMAGENES */
-.gallery img{
-    width:120px;
-    height:70px;
-
-    object-fit:cover;
-
-    border-radius:8px;
-
-    transition:.3s;
-
-    box-shadow:0 0 8px rgba(0,0,0,.4);
+.gallery a {
+    flex: 0 0 auto;
 }
 
-.gallery img:hover{
-    transform:scale(1.05);
-
-    box-shadow:0 0 12px rgba(0,191,255,.5);
+.gallery img {
+    width: 120px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: .3s;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .4);
 }
 
-/* SCROLL */
-.gallery::-webkit-scrollbar{
-    height:6px;
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(0, 191, 255, .5);
 }
 
-.gallery::-webkit-scrollbar-track{
-    background:rgba(255,255,255,.08);
-    border-radius:20px;
+/* Estilos de la barra de scroll de la galería */
+.gallery::-webkit-scrollbar {
+    height: 8px;
 }
 
-.gallery::-webkit-scrollbar-thumb{
-    background:#00bfff;
-    border-radius:20px;
+.gallery::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .1);
+    border-radius: 20px;
 }
 
-/* BOTONES */
-.video-btn{
-    display:inline-block;
-
-    margin-top:15px;
-
-    padding:12px 25px;
-
-    background:#00bfff;
-
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:10px;
-
-    font-size:15px;
-
-    font-weight:bold;
-
-    transition:.3s;
+.gallery::-webkit-scrollbar-thumb {
+    background: #00bfff;
+    border-radius: 20px;
 }
 
-.video-btn:hover{
-    background:#0099cc;
-
-    transform:scale(1.03);
+/* ==========================================================================
+   6. BOTONES DIRECTOS (NATIVOS)
+   ========================================================================== */
+.video-btn {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    background: #ff4500; /* Color por defecto (p. ej: Videos en Naranja/Rojo) */
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: .3s;
 }
 
-/* SCROLL */
-.gallery::-webkit-scrollbar{
-    height:8px;
+.video-btn:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
 }
 
-.gallery::-webkit-scrollbar-track{
-    background:rgba(255,255,255,.1);
+/* Botón de Ver Proyecto (Celeste) */
+.project-btn {
+    background: #00bfff !important;
 }
 
-.gallery::-webkit-scrollbar-thumb{
-    background:#00bfff;
-    border-radius:20px;
+/* Botón de Descargar Juego (Verde) */
+.download-btn {
+    background: #28a745 !important;
 }
 
-/* ANCLAS */
+/* ==========================================================================
+   7. SECCIONES ANCLAS & RESPONSIVE
+   ========================================================================== */
 #explorar,
 #scratch,
 #rpgmaker,
-#unity{
-    scroll-margin-top:100px;
+#unity {
+    scroll-margin-top: 100px;
 }
 
-/* RESPONSIVE */
-@media(max-width:1100px){
-
-    .games-grid{
-        grid-template-columns:repeat(2,1fr);
+@media(max-width: 1100px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media(max-width:900px){
-
-    .navbar{
-        flex-direction:column;
-        gap:10px;
+@media(max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .nav-links{
-        flex-wrap:wrap;
-        justify-content:center;
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .games-grid{
-        grid-template-columns:1fr;
-        max-width:550px;
+    .games-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
     }
 
-    .gallery img{
-        width:150px;
-        height:95px;
+    .gallery img {
+        width: 150px;
+        height: 95px;
     }
 }
